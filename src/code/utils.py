@@ -121,6 +121,47 @@ def crop(image, start, end):
     croped = image[y:y_, x:x_]  
     return croped
 
+def split(image):
+    #RA: Review again
+    #Confusion: it should be (b, g, r) or (r, g, b) 
+    """
+    Split image in component colors [Blue, Green, Red].
+
+    Args:
+    image: the image to be splited
+
+    Returns:
+        (r, g, b) : Blue, green and red component of an image
+    """
+    (r, g, b) = cv2.split(image)
+    return (r, g, b)
+
+def get_channel(image, channel):
+    #RA: Review again
+    #Confusion: it should be (b, g, r) or (r, g, b)
+    """
+    Get a given image channel component.
+
+    Channels: ["blue", "green", "red"]
+
+    Args:
+    image: the image to be splited
+
+    Returns:
+        given channel component of an image
+    """
+    (r, g, b) = cv2.split(image)
+
+    channel = channel.lower()
+    if channel == "blue":
+        return b
+    elif channel == "green":
+        return g
+    elif channel == "red":
+        return r
+    else:
+        return None    
+
 
 if __name__ == "__main__":
     print("I am main")

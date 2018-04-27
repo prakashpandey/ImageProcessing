@@ -1,5 +1,5 @@
 # ImageProcessing
-Various utility functions required in image processing
+Various utilities useful in image processing and computer vision projects
 
 ### crop
 crop an image.
@@ -7,7 +7,7 @@ crop an image.
 ```
 start = (200, 0)
 end = (700, 600)
-croped = crop(image, start, end)
+croped = utils.crop(image, start, end)
 ```
 
 ### mask
@@ -17,7 +17,7 @@ Mask will keep the image of dimension start * end and remove other image content
 ```
 start = (200, 0)
 end = (700, 600)
-masked = mask(image, start, end)
+masked = utils.mask(image, start, end)
 ```
 
 ### center
@@ -25,7 +25,7 @@ Find coordinate of center of an image
 
 ```
 image = cv2.imread("my_image.jpg")
-(x, y) = center(image)
+(x, y) = utils.center(image)
 ```
 
 ### resize
@@ -37,10 +37,10 @@ Resize an image while keeping its aspect ratio.
 image = cv2.imread("my_image.jpg")
 
 #using width
-resized = resize(image, width=200, inter=cv2.INTER_AREA)
+resized = utils.resize(image, width=200, inter=cv2.INTER_AREA)
 
 #using height
-resized = resize(image, height=200, inter=cv2.INTER_AREA)
+resized = utils.resize(image, height=200, inter=cv2.INTER_AREA)
 
 ```
 
@@ -49,7 +49,7 @@ Rotate image to a given coordinate
 
 ```
 image = cv2.imread("my_image.jpg")
-rotated = rotate(image, 30)
+rotated = utils.rotate(image, 30)
 ```
 
 ### translate
@@ -57,8 +57,25 @@ Shift image in X,Y direction
 
 ```
 image = cv2.imread("my_image.jpg")
-shifted = imutils.translate(image, 0, -10)
+shifted = utils.translate(image, 0, -10)
 ```
+
+### split
+Split image in component colors [Blue, Green, Red]
+
+```
+image = cv2.imread("my_image.jpg")
+(r, g, b) = utils.split(image)
+```
+
+### get_channel
+Get a given image channel component.
+
+```
+b = utils.get_channel("blue")
+g = utils.get_channel("green")
+r = utils.get_channel("red")
+``` 
 
 # Library used
 ```cv2```
