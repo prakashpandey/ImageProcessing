@@ -29,12 +29,19 @@ image = cv2.imread("my_image.jpg")
 ```
 
 ### resize
-Resize an image. 
+Resize an image while keeping its aspect ratio. 
+
 'height' is only considered for calculating resize factor if 'width' is None
 
 ```
 image = cv2.imread("my_image.jpg")
+
+#using width
 resized = resize(image, width=200, inter=cv2.INTER_AREA)
+
+#using height
+resized = resize(image, height=200, inter=cv2.INTER_AREA)
+
 ```
 
 ### rotate
