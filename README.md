@@ -72,10 +72,20 @@ image = cv2.imread("my_image.jpg")
 Get a given image channel component.
 
 ```
-b = utils.get_channel("blue")
-g = utils.get_channel("green")
-r = utils.get_channel("red")
+image = cv2.imread("my_image.jpg")
+
+b = utils.get_channel(image, "blue")
+g = utils.get_channel(image, "green")
+r = utils.get_channel(image, "red")
 ``` 
+
+### greyscale
+Convert the given image into greyscale.
+
+```
+image = cv2.imread("my_image.jpg")
+greyscaled = utils.greyscale(image)
+```
 
 # Library used
 ```cv2```

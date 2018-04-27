@@ -160,7 +160,20 @@ def get_channel(image, channel):
     elif channel == "red":
         return r
     else:
-        return None    
+        return None   
+
+def greyscale(image):
+    """
+    Convert the given image into greyscale.
+
+    Args:
+    image: the image to be greyscaled
+
+    Returns:
+        greyscaled image
+    """
+    gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+    return gray
 
 
 if __name__ == "__main__":
