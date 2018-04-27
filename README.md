@@ -56,3 +56,15 @@ shifted = imutils.translate(image, 0, -10)
 # Library used
 ```cv2```
 ```numpy```
+
+### License
+You can use this software for commercial as well as non-commercial purpose/purposes, the way you want and without conditions of any kind.
+
+Please visit [LICENSE.md](LICENSE.md) for more details.
+
+### How to contribute
+Please feel free to contribute to this project. You can contact me using below details.
+
+### Contact author
+- E-Mail : pcpandey@mail.com.
+- Twitter : [Prakash Pandey](http://www.twitter.com/pandaypc)
